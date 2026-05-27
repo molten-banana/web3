@@ -269,9 +269,11 @@
 
   padding: 40px 0;
 
+  z-index: 1;
+
 }
 
-/* CENTER LINE */
+/* CENTER LINE (STATIC TRACK) */
 
 .timeline::before {
 
@@ -280,6 +282,7 @@
   position: absolute;
 
   top: 0;
+
   left: 50%;
 
   transform: translateX(-50%);
@@ -288,42 +291,28 @@
 
   height: 100%;
 
-  background:
-    rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.08);
+
+  z-index: 0;
 
 }
 
+/* PROGRESS LINE (FIXED ANIMATION) */
+
 .timeline-progress {
-
   position: absolute;
-
   top: 0;
   left: 50%;
-
-  transform: translateX(-50%);
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top;
 
   width: 3px;
+  height: 100%;
 
-  height: 0;
+  background: linear-gradient(to bottom, #60a5fa, #3b82f6, #2563eb);
 
-  min-height: 0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      #60a5fa,
-      #3b82f6,
-      #2563eb
-    );
-
-  box-shadow:
-    0 0 20px rgba(59,130,246,0.7),
-    0 0 40px rgba(59,130,246,0.45);
-
+  pointer-events: none;
   z-index: 1;
-
-  transition: height 0.15s linear;
-
 }
 
 /* ITEM */
@@ -380,7 +369,7 @@
 
 }
 
-/* ICON */
+/* ICON (FORCED ABOVE LINE) */
 
 .timeline-icon {
 
@@ -393,11 +382,9 @@
 
   border-radius: 50%;
 
-  background:
-    rgba(15,23,42,1);
+  background: rgba(15,23,42,1);
 
-  border:
-    1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.12);
 
   display: flex;
 
@@ -407,29 +394,9 @@
 
   font-size: 1.2rem;
 
-  box-shadow:
-    0 0 25px rgba(59,130,246,0.18);
+  box-shadow: 0 0 25px rgba(59,130,246,0.18);
 
-  z-index: 10;
-
-  overflow: hidden;
-
-}
-
-.timeline-icon::before {
-
-  content: '';
-
-  position: absolute;
-
-  inset: 0;
-
-  border-radius: 50%;
-
-  background:
-    #0f172a;
-
-  z-index: -1;
+  z-index: 10; /* ABOVE progress line */
 
 }
 
@@ -469,8 +436,7 @@
 
 }
 
-/* LEFT ITEM DATE
-   -> date on RIGHT side */
+/* LEFT ITEM DATE */
 
 .timeline-item.left .timeline-date {
 
@@ -480,8 +446,7 @@
 
 }
 
-/* RIGHT ITEM DATE
-   -> date on LEFT side */
+/* RIGHT ITEM DATE */
 
 .timeline-item.right .timeline-date {
 
@@ -499,37 +464,28 @@
 
   border-radius: 28px;
 
-  background:
-    rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.05);
 
-  border:
-    1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter:
-    blur(18px);
+  backdrop-filter: blur(18px);
 
   overflow: hidden;
 
   opacity: 0.45;
 
-  box-shadow:
-    0 10px 35px rgba(0,0,0,0.18),
-    0 0 30px rgba(59,130,246,0.08);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.18);
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
 
 .timeline-card:hover {
 
-  transform:
-    translateY(-6px);
+  transform: translateY(-6px);
 
-  box-shadow:
-    0 14px 45px rgba(0,0,0,0.22),
-    0 0 45px rgba(59,130,246,0.14);
+  box-shadow: 0 14px 45px rgba(0,0,0,0.22),
+              0 0 45px rgba(59,130,246,0.14);
 
 }
 
@@ -539,12 +495,7 @@
 
   opacity: 1;
 
-  box-shadow:
-    0 14px 45px rgba(0,0,0,0.24),
-    0 0 55px rgba(59,130,246,0.28);
-
-  border:
-    1px solid rgba(96,165,250,0.28);
+  border: 1px solid rgba(96,165,250,0.28);
 
 }
 
@@ -620,42 +571,6 @@
     left: 30px;
 
   }
-  
-  .timeline-progress {
-
-  position: absolute;
-
-  top: 0;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 2px;
-
-  height: 0;
-
-  min-height: 0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      #60a5fa,
-      #3b82f6,
-      #2563eb
-    );
-
-  filter:
-    drop-shadow(0 0 8px rgba(59,130,246,0.5));
-
-
-  z-index: 1;
-
-  pointer-events: none;
-
-  transition: height 0.15s linear;
-
-}
-
 
   .timeline-date {
 
