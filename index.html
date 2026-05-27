@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Your Name | Resume</title>
+
+  <link
+    rel="stylesheet"
+    href="assets/css/variables.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="assets/css/background.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="assets/css/sections.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="assets/css/style.css"
+  />
+
+</head>
+
+<body>
+
+ <!-- ANIMATED BACKGROUND -->
+
+<canvas
+  id="canvas_back"
+  data-size="40"
+  data-opacity="2"
+  data-dust="300"
+></canvas>
+
+<div id="cover"></div>
+
+<canvas
+  id="canvas_front"
+  data-size="3"
+  data-opacity="20"
+  data-dust="600"
+></canvas>
+
+  <!-- THEME TOGGLE -->
+
+  <button
+    id="theme-toggle"
+    class="theme-toggle"
+  >
+    🌙
+  </button>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="parallax-inner">
+
+        <div class="hero-content">
+
+          <h1>Your Name</h1>
+
+          <p>
+            Frontend Developer • Designer • Creative Technologist
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="#projects"
+              class="glass-button"
+            >
+              Projects
+            </a>
+
+            <a
+              href="#contact"
+              class="glass-button"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="content-section fade-section">
+
+      <div class="section-container">
+
+        <div class="parallax-inner">
+
+          <h2>About Me</h2>
+
+          <p>
+            Write your professional summary here.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section class="content-section fade-section">
+
+      <div class="section-container">
+
+        <div class="parallax-inner">
+
+          <h2>Skills</h2>
+
+          <div class="card-grid">
+
+            <div class="card">
+
+              <h3>Frontend</h3>
+
+              <p>
+                HTML, CSS, JavaScript, React
+              </p>
+
+            </div>
+
+            <div class="card">
+
+              <h3>Backend</h3>
+
+              <p>
+                Node.js, APIs, Databases
+              </p>
+
+            </div>
+
+            <div class="card">
+
+              <h3>Tools</h3>
+
+              <p>
+                Git, Figma, VS Code
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+<!-- EXPERIENCE -->
+
+<section class="content-section fade-section">
+
+  <div class="section-container">
+
+    <div class="parallax-inner">
+
+      <h2>Work Experience</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-progress"></div>
+
+        <!-- ITEM -->
+
+        <div class="timeline-item left">
+
+          <div class="timeline-icon">
+            💼
+          </div>
+
+          <div class="timeline-date">
+            2024 — Present
+          </div>
+
+          <div class="timeline-card">
+
+            <h3>Frontend Developer</h3>
+
+            <h4>Company Name</h4>
+
+            <p>
+              Built responsive interfaces,
+              improved UX performance and
+              developed scalable frontend systems.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- ITEM -->
+
+        <div class="timeline-item right">
+
+          <div class="timeline-icon">
+            🎓
+          </div>
+
+          <div class="timeline-date">
+            2021 — 2024
+          </div>
+
+          <div class="timeline-card">
+
+            <h3>Computer Science</h3>
+
+            <h4>University Name</h4>
+
+            <p>
+              Specialized in frontend engineering,
+              interaction design and software architecture.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- ITEM -->
+
+        <div class="timeline-item left">
+
+          <div class="timeline-icon">
+            💼
+          </div>
+
+          <div class="timeline-date">
+            2020 — 2021
+          </div>
+
+          <div class="timeline-card">
+
+            <h3>Freelance Developer</h3>
+
+            <h4>Self Employed</h4>
+
+            <p>
+              Created websites, landing pages
+              and branding experiences for clients.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- PROJECTS -->
+
+    <section
+      id="projects"
+      class="content-section fade-section"
+    >
+
+      <div class="section-container">
+
+        <div class="parallax-inner">
+
+          <h2>Projects</h2>
+
+          <div class="card-grid">
+
+            <div class="card">
+
+              <h3>Portfolio Website</h3>
+
+              <p>
+                Modern responsive portfolio.
+              </p>
+
+            </div>
+
+            <div class="card">
+
+              <h3>Dashboard App</h3>
+
+              <p>
+                Analytics dashboard with charts.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section
+      id="contact"
+      class="content-section fade-section"
+    >
+
+      <div class="section-container">
+
+        <div class="parallax-inner">
+
+          <h2>Contact</h2>
+
+          <p>
+            your@email.com
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- JS -->
+
+  <script src="assets/js/theme.js"></script>
+
+  <script src="assets/js/background.js"></script>
+
+  <script src="assets/js/animations.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
