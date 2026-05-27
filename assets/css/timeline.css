@@ -254,19 +254,29 @@
    MOBILE
 ========================= */
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 900px) {
 
+  /* CENTER LINE */
+
   .timeline::before {
-    left: 30px;
+    left: 26px;
+
     transform: none;
   }
 
   .timeline-progress {
-    left: 30px;
+    left: 26px;
+
     transform:
       translateX(0)
       scaleY(0);
   }
+
+  /* ITEMS */
 
   .timeline-item {
     width: 100%;
@@ -275,24 +285,44 @@
 
     text-align: left !important;
 
-    padding-left: 70px;
-    padding-right: 20px;
+    padding-left: 80px;
+    padding-right: 10px;
   }
+
+  /* ICONS */
 
   .timeline-icon {
-    left: 0 !important;
+    left: 26px !important;
 
     transform: translateX(-50%);
+
+    width: 48px;
+    height: 48px;
   }
+
+  /* DATES */
 
   .timeline-date {
     position: relative;
 
-    margin-bottom: 10px;
+    top: auto;
 
     left: auto !important;
     right: auto !important;
 
     display: block;
+
+    margin-bottom: 14px;
+
+    font-size: 0.85rem;
+
+    opacity: 0.75;
   }
+
+  /* CARDS */
+
+  .timeline-card {
+    padding: 26px;
+  }
+
 }
