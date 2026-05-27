@@ -315,6 +315,14 @@
   z-index: 1;
 }
 
+.timeline-progress {
+  box-shadow:
+    0 0 10px rgba(96, 165, 250, 0.4),
+    0 0 25px rgba(59, 130, 246, 0.25);
+
+  animation: timelineGlow 2.5s ease-in-out infinite;
+}
+
 /* ITEM */
 
 .timeline-item {
@@ -562,32 +570,69 @@
 
 }
 
+@keyframes timelineGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 8px rgba(96, 165, 250, 0.35),
+      0 0 20px rgba(59, 130, 246, 0.2);
+  }
+
+  50% {
+    box-shadow:
+      0 0 14px rgba(96, 165, 250, 0.55),
+      0 0 35px rgba(59, 130, 246, 0.35);
+  }
+}
+
+
 /* MOBILE */
 
-@media (max-width: 900px) {
+@@media (max-width: 900px) {
 
+  /* CENTER LINE MOVES LEFT (OK) */
   .timeline::before {
-
     left: 30px;
-
+    transform: none;
   }
 
-  .timeline-date {
+  .timeline-progress {
+    left: 30px;
+    transform: translateX(0) scaleY(0);
+  }
 
-    position: relative;
-
-    top: auto;
-
-    left: auto !important;
-
-    right: auto !important;
-
-    margin-bottom: 16px;
-
-    display: block;
-
+  /* 🔥 CRITICAL FIX: make items full width */
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 20px;
+    left: 0 !important;
     text-align: left !important;
-
   }
 
+  /* 🔥 CRITICAL FIX: remove split layout behavior */
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 70px;
+    padding-right: 20px;
+  }
+
+  /* ICON MUST ALIGN TO LEFT LINE */
+  .timeline-icon {
+    left: 0 !important;
+    right: auto !important;
+    transform: translateX(-50%);
+  }
+
+  /* 🔥 FIX DATE POSITIONING */
+  .timeline-date {
+    position: relative;
+    top: auto;
+    left: auto !important;
+    right: auto !important;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+  }
 }
