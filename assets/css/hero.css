@@ -1,0 +1,59 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  max-width: 1000px;
+
+  margin: auto;
+
+  text-align: center;
+
+  padding: 100px 20px;
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.hero.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 160px;
+  }
+}

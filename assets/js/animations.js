@@ -75,6 +75,19 @@ function updateActiveCards() {
   });
 }
 
+
+const skillSection = document.querySelector('.skills-grid');
+
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.3 });
+
+if (skillSection) skillObserver.observe(skillSection);
+
 /* =========================
    PARALLAX
 ========================= */

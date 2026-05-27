@@ -4,23 +4,27 @@
 <head>
 
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" href="assets/favicon.png" type="image/png">
 
   <title>Your Name | Resume</title>
 
-  <link rel="stylesheet" href="assets/css/variables.css" />
-  <link rel="stylesheet" href="assets/css/background.css" />
-  <link rel="stylesheet" href="assets/css/sections.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+<!-- CSS -->
+<link rel="stylesheet" href="assets/css/background.css" />
+<link rel="stylesheet" href="assets/css/layout.css" />
+<link rel="stylesheet" href="assets/css/hero.css" />
+<link rel="stylesheet" href="assets/css/cards.css" />
+<link rel="stylesheet" href="assets/css/timeline.css" />
+<link rel="stylesheet" href="assets/css/skills.css" />
+<link rel="stylesheet" href="assets/css/projects.css" />
+<link rel="stylesheet" href="assets/css/utilities.css" />
 
 </head>
 
 <body>
 
- <!-- ANIMATED BACKGROUND -->
+<!-- ANIMATED BACKGROUND -->
 
 <canvas id="canvas_back" data-size="40" data-opacity="2" data-dust="300"></canvas>
 <div id="cover"></div>
@@ -29,8 +33,6 @@
 <!-- THEME TOGGLE -->
 
 <button id="theme-toggle" class="theme-toggle">🌙</button>
-
-<!-- MAIN -->
 
 <main class="main-content">
 
@@ -86,11 +88,89 @@
 
         <h2>Skills</h2>
 
-        <div class="card-grid">
+        <div class="skills-grid">
 
-          <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></div>
-          <div class="card"><h3>Backend</h3><p>Node.js, APIs, Databases</p></div>
-          <div class="card"><h3>Tools</h3><p>Git, Figma, VS Code</p></div>
+          <div class="skill-card">
+            <div class="skill-top">
+              <div class="skill-icon">⚡</div>
+              <h3>Frontend</h3>
+            </div>
+
+            <div class="skill-item">
+              <span>HTML</span>
+              <div class="skill-bar"><div style="--target-width: 95%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <span>CSS</span>
+              <div class="skill-bar"><div style="--target-width: 90%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <span>JavaScript</span>
+              <div class="skill-bar"><div style="--target-width: 85%"></div></div>
+            </div>
+
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-top">
+              <div class="skill-icon">🧩</div>
+              <h3>Frameworks</h3>
+            </div>
+
+            <div class="skill-item">
+              <span>React</span>
+              <div class="skill-bar"><div style="--target-width: 80%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Node.js</span>
+              <div class="skill-bar"><div style="--target-width: 78%"></div></div>
+            </div>
+
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-top">
+              <div class="skill-icon">🛠️</div>
+              <h3>Tools</h3>
+            </div>
+
+            <div class="skill-item">
+              <span>Git</span>
+              <div class="skill-bar"><div style="--target-width: 85%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Figma</span>
+              <div class="skill-bar"><div style="--target-width: 80%"></div></div>
+            </div>
+
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-top">
+              <div class="skill-icon">🚀</div>
+              <h3>Extras</h3>
+            </div>
+
+            <div class="skill-item">
+              <span>APIs</span>
+              <div class="skill-bar"><div style="--target-width: 75%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <span>Databases</span>
+              <div class="skill-bar"><div style="--target-width: 70%"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <span>VS Code</span>
+              <div class="skill-bar"><div style="--target-width: 95%"></div></div>
+            </div>
+
+          </div>
 
         </div>
 
@@ -114,42 +194,43 @@
           <div class="timeline-progress"></div>
 
           <div class="timeline-item left">
-
             <div class="timeline-icon">💼</div>
             <div class="timeline-date">2024 — Present</div>
-
             <div class="timeline-card">
               <h3>Frontend Developer</h3>
               <h4>Company Name</h4>
               <p>Built responsive interfaces, improved UX performance and developed scalable frontend systems.</p>
             </div>
-
           </div>
 
           <div class="timeline-item right">
-
-            <div class="timeline-icon">🎓</div>
+            <div class="timeline-icon">💼</div>
             <div class="timeline-date">2021 — 2024</div>
-
             <div class="timeline-card">
               <h3>Computer Science</h3>
               <h4>University Name</h4>
               <p>Specialized in frontend engineering, interaction design and software architecture.</p>
             </div>
-
           </div>
 
           <div class="timeline-item left">
-
             <div class="timeline-icon">💼</div>
             <div class="timeline-date">2020 — 2021</div>
-
             <div class="timeline-card">
               <h3>Freelance Developer</h3>
               <h4>Self Employed</h4>
               <p>Created websites, landing pages and branding experiences for clients.</p>
             </div>
+          </div>
 
+          <div class="timeline-item right">
+            <div class="timeline-icon">💼</div>
+            <div class="timeline-date">2017 — 2020</div>
+            <div class="timeline-card">
+              <h3>Freelance Frontend Developer</h3>
+              <h4>Independent</h4>
+              <p>Built modern interactive websites and UI systems with focus on animation, UX, and performance.</p>
+            </div>
           </div>
 
         </div>
@@ -160,7 +241,7 @@
 
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS (SAAS PREMIUM UPGRADE) -->
   <section id="projects" class="content-section fade-section">
 
     <div class="section-container">
@@ -169,20 +250,71 @@
 
         <h2>Projects</h2>
 
-        <div class="card-grid">
+        <!-- FEATURED SAAS PROJECT CARD -->
+        <div class="featured-project">
 
-          <div class="card project-card"
-               data-title="Portfolio Website"
-               data-desc="Modern responsive portfolio built with animations and canvas background.">
-            <h3>Portfolio Website</h3>
-            <p>Modern responsive portfolio.</p>
+          <div class="featured-content">
+
+            <!-- LEFT SIDE -->
+            <div class="featured-left">
+
+              <div class="featured-badge">FEATURED PROJECT</div>
+
+              <h3>Portfolio SaaS System</h3>
+
+              <p>
+                A high-performance animated portfolio system inspired by modern SaaS dashboards.
+                Built with parallax motion, glass UI, and real-time visual effects.
+              </p>
+
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+
+              <a href="#" class="glass-button">View Live</a>
+
+            </div>
+
+            <!-- RIGHT SIDE (VISUAL MOCK PANEL) -->
+            <div class="featured-right">
+
+              <div class="mock-window">
+                <div class="mock-topbar">
+                  <span></span><span></span><span></span>
+                </div>
+
+                <div class="mock-content">
+                  <div class="mock-line"></div>
+                  <div class="mock-line"></div>
+                  <div class="mock-line short"></div>
+                  <div class="mock-chart"></div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
 
-          <div class="card project-card"
-               data-title="Dashboard App"
-               data-desc="Analytics dashboard with charts, real-time data and interactive UI components.">
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div class="card-grid">
+
+          <div class="card">
             <h3>Dashboard App</h3>
-            <p>Analytics dashboard with charts.</p>
+            <p>Real-time analytics dashboard with charts and UI components.</p>
+          </div>
+
+          <div class="card">
+            <h3>E-commerce UI</h3>
+            <p>Modern shopping interface with filtering and cart system.</p>
+          </div>
+
+          <div class="card">
+            <h3>Landing Page System</h3>
+            <p>Reusable animated landing pages for SaaS products.</p>
           </div>
 
         </div>

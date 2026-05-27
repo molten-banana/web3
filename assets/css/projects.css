@@ -1,0 +1,169 @@
+/* =========================
+   FEATURED PROJECT
+========================= */
+
+.featured-project {
+  margin-top: 50px;
+  margin-bottom: 40px;
+
+  padding: 40px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,0.15),
+      rgba(15,23,42,0.4)
+    );
+
+  border: 1px solid rgba(59,130,246,0.25);
+
+  backdrop-filter: blur(18px);
+}
+
+/* CONTENT */
+
+.featured-content {
+  display: grid;
+
+  grid-template-columns: 1.2fr 1fr;
+
+  gap: 40px;
+
+  align-items: center;
+}
+
+/* LEFT */
+
+.featured-left h3 {
+  font-size: 2rem;
+
+  margin-bottom: 14px;
+}
+
+.featured-left p {
+  line-height: 1.7;
+
+  margin-bottom: 20px;
+
+  max-width: 700px;
+}
+
+/* BADGE */
+
+.featured-badge {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 1px;
+
+  background: rgba(59,130,246,0.15);
+
+  border: 1px solid rgba(59,130,246,0.25);
+}
+
+/* TAGS */
+
+.project-tags {
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+}
+
+.project-tags span {
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* MOCK WINDOW */
+
+.mock-window {
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(16px);
+}
+
+.mock-topbar {
+  display: flex;
+
+  gap: 8px;
+
+  padding: 14px;
+}
+
+.mock-topbar span {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.35);
+}
+
+.mock-content {
+  padding: 20px;
+}
+
+.mock-line {
+  height: 10px;
+
+  border-radius: 999px;
+
+  margin-bottom: 14px;
+
+  background: rgba(255,255,255,0.08);
+}
+
+.mock-line.short {
+  width: 60%;
+}
+
+.mock-chart {
+  height: 120px;
+
+  margin-top: 20px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(59,130,246,0.25),
+      rgba(59,130,246,0.05)
+    );
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .featured-content {
+    grid-template-columns: 1fr;
+  }
+
+}
